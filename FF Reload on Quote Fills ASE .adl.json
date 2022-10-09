@@ -1,0 +1,1404 @@
+{
+  "id": "0cd704b4-ba93-487d-9916-cc2def00d7cd",
+  "name": "FF Reload on Quote Fills ASE ",
+  "description": "",
+  "orderSide": false,
+  "variables": [
+    "211cd8a3-cdbc-4308-88f9-28a9e713fdd5",
+    "875de33c-d5c8-4497-a8d4-7de741f42516",
+    "1fe95492-c033-47b9-a35a-6bcc67e0b724",
+    "f527d903-cb62-42c9-91b0-2faea215520d",
+    "b6f4593e-fa5e-4a3b-8b71-9540dc182b32"
+  ],
+  "exports": [],
+  "bookmarks": [],
+  "content": [
+    {
+      "defName": "Group",
+      "defId": "EBFF8C10-18B0-4944-B89F-55893838D5DB",
+      "guid": "a99249a2-bb75-4b29-a67c-fc3775529b64",
+      "x": 797,
+      "y": 211,
+      "properties": [
+        {
+          "name": "name",
+          "value": "Virtualized Block",
+          "hasCustomName": true
+        },
+        {
+          "name": "isCollapsed",
+          "value": false
+        },
+        {
+          "name": "virtual",
+          "value": true
+        },
+        {
+          "name": "connectors",
+          "value": {
+            "00fb4819-9605-404e-b97e-29ac90ef25a2": {
+              "guid": "00fb4819-9605-404e-b97e-29ac90ef25a2",
+              "name": "Instrument",
+              "type": "string",
+              "input": true
+            },
+            "6acebde8-96cc-4f1c-9d72-1b77e07ced0e": {
+              "guid": "6acebde8-96cc-4f1c-9d72-1b77e07ced0e",
+              "name": "Price",
+              "type": "real",
+              "input": true
+            },
+            "732c147d-5211-46b6-9021-f531cb34ca22": {
+              "guid": "732c147d-5211-46b6-9021-f531cb34ca22",
+              "name": "Reload Qty",
+              "type": "real",
+              "input": true
+            },
+            "abef9571-7cbe-4ff6-85ca-da413c888033": {
+              "guid": "abef9571-7cbe-4ff6-85ca-da413c888033",
+              "name": "TF",
+              "type": "message",
+              "input": false
+            },
+            "537d77e3-9bf3-4be7-a3d4-bc1b436656b6": {
+              "guid": "537d77e3-9bf3-4be7-a3d4-bc1b436656b6",
+              "name": "trigger",
+              "type": "message",
+              "input": true
+            },
+            "0bccf691-be12-4b42-a568-948888ea9933": {
+              "guid": "0bccf691-be12-4b42-a568-948888ea9933",
+              "name": "ASE fill signal",
+              "type": "message",
+              "input": false
+            },
+            "7eaec3e5-07a8-4aa3-8475-bcc382be707b": {
+              "guid": "7eaec3e5-07a8-4aa3-8475-bcc382be707b",
+              "name": "QF",
+              "type": "message",
+              "input": false
+            }
+          }
+        },
+        {
+          "name": "dimensions",
+          "value": {
+            "width": 125,
+            "height": 77
+          }
+        }
+      ],
+      "exportValues": [],
+      "isVirtual": true,
+      "definition": {
+        "connectors": [
+          {
+            "name": "Instrument",
+            "type": "string",
+            "id": "00fb4819-9605-404e-b97e-29ac90ef25a2",
+            "direction": "input"
+          },
+          {
+            "name": "Price",
+            "type": "real",
+            "id": "6acebde8-96cc-4f1c-9d72-1b77e07ced0e",
+            "direction": "input"
+          },
+          {
+            "name": "Reload Qty",
+            "type": "real",
+            "id": "732c147d-5211-46b6-9021-f531cb34ca22",
+            "direction": "input"
+          },
+          {
+            "name": "TF",
+            "type": "message",
+            "id": "abef9571-7cbe-4ff6-85ca-da413c888033",
+            "direction": "output"
+          },
+          {
+            "name": "trigger",
+            "type": "message",
+            "id": "537d77e3-9bf3-4be7-a3d4-bc1b436656b6",
+            "direction": "input"
+          },
+          {
+            "name": "ASE fill signal",
+            "type": "message",
+            "id": "0bccf691-be12-4b42-a568-948888ea9933",
+            "direction": "output"
+          },
+          {
+            "name": "QF",
+            "type": "message",
+            "id": "7eaec3e5-07a8-4aa3-8475-bcc382be707b",
+            "direction": "output"
+          }
+        ]
+      },
+      "internalAlgo": {
+        "id": "a99249a2-bb75-4b29-a67c-fc3775529b64",
+        "defId": "a99249a2-bb75-4b29-a67c-fc3775529b64",
+        "name": "Virtualized Block",
+        "content": [
+          {
+            "defName": "Connector",
+            "defId": "EBB9C2B1-7FD7-4632-B99E-436F44C3F839",
+            "guid": "00fb4819-9605-404e-b97e-29ac90ef25a2",
+            "x": 50,
+            "y": 100,
+            "properties": [
+              {
+                "name": "name",
+                "value": "Instrument",
+                "hasCustomName": true
+              },
+              {
+                "name": "dimensions",
+                "value": {
+                  "width": 65,
+                  "height": 30
+                }
+              },
+              {
+                "name": "definition",
+                "value": {
+                  "guid": "00fb4819-9605-404e-b97e-29ac90ef25a2",
+                  "name": "Instrument",
+                  "type": "string",
+                  "input": true
+                }
+              }
+            ],
+            "exportValues": [],
+            "groupConnector": "00fb4819-9605-404e-b97e-29ac90ef25a2"
+          },
+          {
+            "defName": "Connector",
+            "defId": "EBB9C2B1-7FD7-4632-B99E-436F44C3F839",
+            "guid": "6acebde8-96cc-4f1c-9d72-1b77e07ced0e",
+            "x": 50,
+            "y": 200,
+            "properties": [
+              {
+                "name": "name",
+                "value": "Price",
+                "hasCustomName": true
+              },
+              {
+                "name": "dimensions",
+                "value": {
+                  "width": 65,
+                  "height": 30
+                }
+              },
+              {
+                "name": "definition",
+                "value": {
+                  "guid": "6acebde8-96cc-4f1c-9d72-1b77e07ced0e",
+                  "name": "Price",
+                  "type": "real",
+                  "input": true
+                }
+              }
+            ],
+            "exportValues": [],
+            "groupConnector": "6acebde8-96cc-4f1c-9d72-1b77e07ced0e"
+          },
+          {
+            "defName": "Connector",
+            "defId": "EBB9C2B1-7FD7-4632-B99E-436F44C3F839",
+            "guid": "732c147d-5211-46b6-9021-f531cb34ca22",
+            "x": 50,
+            "y": 300,
+            "properties": [
+              {
+                "name": "name",
+                "value": "Reload Qty",
+                "hasCustomName": true
+              },
+              {
+                "name": "dimensions",
+                "value": {
+                  "width": 65,
+                  "height": 30
+                }
+              },
+              {
+                "name": "definition",
+                "value": {
+                  "guid": "732c147d-5211-46b6-9021-f531cb34ca22",
+                  "name": "Reload Qty",
+                  "type": "real",
+                  "input": true
+                }
+              }
+            ],
+            "exportValues": [],
+            "groupConnector": "732c147d-5211-46b6-9021-f531cb34ca22"
+          },
+          {
+            "defName": "Connector",
+            "defId": "EBB9C2B1-7FD7-4632-B99E-436F44C3F839",
+            "guid": "abef9571-7cbe-4ff6-85ca-da413c888033",
+            "x": 641,
+            "y": 325,
+            "properties": [
+              {
+                "name": "name",
+                "value": "TF",
+                "hasCustomName": true
+              },
+              {
+                "name": "dimensions",
+                "value": {
+                  "width": 65,
+                  "height": 30
+                }
+              },
+              {
+                "name": "definition",
+                "value": {
+                  "guid": "abef9571-7cbe-4ff6-85ca-da413c888033",
+                  "name": "TF",
+                  "type": "message",
+                  "input": false
+                }
+              }
+            ],
+            "exportValues": [],
+            "groupConnector": "abef9571-7cbe-4ff6-85ca-da413c888033"
+          },
+          {
+            "defName": "Connector",
+            "defId": "EBB9C2B1-7FD7-4632-B99E-436F44C3F839",
+            "guid": "537d77e3-9bf3-4be7-a3d4-bc1b436656b6",
+            "x": 52,
+            "y": 386,
+            "properties": [
+              {
+                "name": "name",
+                "value": "trigger",
+                "hasCustomName": true
+              },
+              {
+                "name": "dimensions",
+                "value": {
+                  "width": 65,
+                  "height": 30
+                }
+              },
+              {
+                "name": "definition",
+                "value": {
+                  "guid": "537d77e3-9bf3-4be7-a3d4-bc1b436656b6",
+                  "name": "trigger",
+                  "type": "message",
+                  "input": true
+                }
+              }
+            ],
+            "exportValues": [],
+            "groupConnector": "537d77e3-9bf3-4be7-a3d4-bc1b436656b6"
+          },
+          {
+            "defName": "Connector",
+            "defId": "EBB9C2B1-7FD7-4632-B99E-436F44C3F839",
+            "guid": "0bccf691-be12-4b42-a568-948888ea9933",
+            "x": 989,
+            "y": 257,
+            "properties": [
+              {
+                "name": "name",
+                "value": "ASE fill signal",
+                "hasCustomName": true
+              },
+              {
+                "name": "dimensions",
+                "value": {
+                  "width": 65,
+                  "height": 30
+                }
+              },
+              {
+                "name": "definition",
+                "value": {
+                  "guid": "0bccf691-be12-4b42-a568-948888ea9933",
+                  "name": "ASE fill signal",
+                  "type": "message",
+                  "input": false
+                }
+              }
+            ],
+            "exportValues": [],
+            "groupConnector": "0bccf691-be12-4b42-a568-948888ea9933"
+          },
+          {
+            "defName": "Connector",
+            "defId": "EBB9C2B1-7FD7-4632-B99E-436F44C3F839",
+            "guid": "7eaec3e5-07a8-4aa3-8475-bcc382be707b",
+            "x": 617,
+            "y": 86,
+            "properties": [
+              {
+                "name": "name",
+                "value": "QF",
+                "hasCustomName": true
+              },
+              {
+                "name": "dimensions",
+                "value": {
+                  "width": 65,
+                  "height": 30
+                }
+              },
+              {
+                "name": "definition",
+                "value": {
+                  "guid": "7eaec3e5-07a8-4aa3-8475-bcc382be707b",
+                  "name": "QF",
+                  "type": "message",
+                  "input": false
+                }
+              }
+            ],
+            "exportValues": [],
+            "groupConnector": "7eaec3e5-07a8-4aa3-8475-bcc382be707b"
+          },
+          {
+            "defName": "Order",
+            "defId": "DEC271C9-38E8-499A-ADA2-795B51544FE3",
+            "guid": "211cd8a3-cdbc-4308-88f9-28a9e713fdd5",
+            "x": 388,
+            "y": 100,
+            "properties": [
+              {
+                "name": "name",
+                "value": "Order0",
+                "hasCustomName": true
+              },
+              {
+                "name": "type",
+                "value": "limit"
+              },
+              {
+                "name": "side",
+                "value": "buy"
+              },
+              {
+                "name": "TIF",
+                "value": "day"
+              },
+              {
+                "name": "flipForSell",
+                "value": true
+              },
+              {
+                "name": "Autospreader",
+                "value": true
+              },
+              {
+                "name": "onExtMod",
+                "value": "StopManaging"
+              },
+              {
+                "name": "leaveOnPauseCancel",
+                "value": []
+              },
+              {
+                "name": "ignoreInputsAfterAdd",
+                "value": false
+              },
+              {
+                "name": "autoResubmit",
+                "value": true
+              },
+              {
+                "name": "submitInSuspendedState",
+                "value": false
+              },
+              {
+                "name": "Connectors",
+                "value": [
+                  "7c73e48e-7161-413f-a60f-3e4013027072",
+                  "7447d16d-6770-498b-8bc0-555958d8c68c",
+                  "23d72998-0705-4b7b-953e-18cc54358155"
+                ]
+              },
+              {
+                "name": "tag",
+                "value": ""
+              },
+              {
+                "name": "color",
+                "value": "rgb(255, 255, 255)"
+              },
+              {
+                "name": "dimensions",
+                "value": {
+                  "width": 90,
+                  "height": 90
+                }
+              }
+            ],
+            "exportValues": []
+          },
+          {
+            "defName": "Math",
+            "defId": "9B56327C-3D82-443B-BF29-1FB8A7C2D658",
+            "guid": "313dd8f0-90a1-435a-b141-e62209f05f04",
+            "x": 200,
+            "y": 225,
+            "properties": [
+              {
+                "name": "name",
+                "value": "Math0",
+                "hasCustomName": true
+              },
+              {
+                "name": "mathFunction",
+                "value": "Min(x,y)"
+              },
+              {
+                "name": "dimensions",
+                "value": {
+                  "width": 100,
+                  "height": 50
+                }
+              }
+            ],
+            "exportValues": []
+          },
+          {
+            "defName": "ValueAccumulator",
+            "defId": "7C23E28F-AF94-4D4D-9E4D-0AD5584D0F4F",
+            "guid": "4144c3b7-c6dd-4b46-8bfb-cda72cedb6b3",
+            "x": 842,
+            "y": 142,
+            "properties": [
+              {
+                "name": "name",
+                "value": "signal",
+                "hasCustomName": true
+              },
+              {
+                "name": "formula",
+                "value": "{fillQuantity} "
+              },
+              {
+                "name": "connectors",
+                "value": {}
+              },
+              {
+                "name": "dimensions",
+                "value": {
+                  "width": 100,
+                  "height": 40
+                }
+              },
+              {
+                "name": "formulaGraphId",
+                "value": "7b43320c-699d-47a4-b7c5-4cd5f1ce64fe"
+              },
+              {
+                "name": "formulaNodes",
+                "value": {
+                  "output": {
+                    "type": "field",
+                    "loc": {
+                      "start": {
+                        "offset": 0,
+                        "line": 1,
+                        "column": 1
+                      },
+                      "end": {
+                        "offset": 14,
+                        "line": 1,
+                        "column": 15
+                      }
+                    },
+                    "name": "fillQuantity"
+                  }
+                }
+              }
+            ],
+            "exportValues": []
+          },
+          {
+            "defName": "Equal",
+            "defId": "EE3EC1CE-5407-4610-A0D2-1E3EA1B17A97",
+            "guid": "4c1eb0bc-cfb3-41df-866f-a76e52681903",
+            "x": 756,
+            "y": 248,
+            "properties": [
+              {
+                "name": "name",
+                "value": "Equal0",
+                "hasCustomName": true
+              },
+              {
+                "name": "dimensions",
+                "value": {
+                  "width": 40,
+                  "height": 40
+                }
+              },
+              {
+                "name": "generic",
+                "value": {
+                  "2828a3df-11c9-41ff-be31-8e2051e1aeae": "real",
+                  "30b58a47-3150-4f5a-ab6f-8d9f06693618": "real"
+                }
+              }
+            ],
+            "exportValues": []
+          },
+          {
+            "defName": "Generator",
+            "defId": "197F74F7-3A63-4191-A761-538485367671",
+            "guid": "31028761-9e3d-4748-a8f1-bfcf97041629",
+            "x": 840,
+            "y": 248,
+            "properties": [
+              {
+                "name": "name",
+                "value": "Generator0",
+                "hasCustomName": true
+              },
+              {
+                "name": "mode",
+                "value": "boolTrue"
+              },
+              {
+                "name": "dateTime",
+                "value": "1654008767620000000"
+              },
+              {
+                "name": "Connectors",
+                "value": []
+              },
+              {
+                "name": "color",
+                "value": "rgb(200, 200, 200)"
+              },
+              {
+                "name": "dimensions",
+                "value": {
+                  "width": 50,
+                  "height": 50
+                }
+              }
+            ],
+            "exportValues": []
+          },
+          {
+            "defName": "ValueExtractor",
+            "defId": "2B392926-6814-4444-B23E-2320078FCB64",
+            "guid": "6b3a2cef-f714-4403-bd40-2ea49c0c6579",
+            "x": 170,
+            "y": 401.5,
+            "properties": [
+              {
+                "name": "name",
+                "value": "ValueExtractor0",
+                "hasCustomName": true
+              },
+              {
+                "name": "formula",
+                "value": "{userField1} "
+              },
+              {
+                "name": "connectors",
+                "value": {}
+              },
+              {
+                "name": "dimensions",
+                "value": {
+                  "width": 120,
+                  "height": 55
+                }
+              },
+              {
+                "name": "formulaGraphId",
+                "value": "eb879a73-7879-4aec-8e45-ff32f127daaf"
+              },
+              {
+                "name": "generic",
+                "value": {
+                  "97a5b309-39ff-403f-832c-a18ed4717dad": "real",
+                  "27318463-032d-41c0-94da-fd00329f22fb": "real"
+                }
+              },
+              {
+                "name": "formulaNodes",
+                "value": {
+                  "output": {
+                    "type": "field",
+                    "loc": {
+                      "start": {
+                        "offset": 0,
+                        "line": 1,
+                        "column": 1
+                      },
+                      "end": {
+                        "offset": 12,
+                        "line": 1,
+                        "column": 13
+                      }
+                    },
+                    "name": "userField1"
+                  }
+                }
+              }
+            ],
+            "exportValues": []
+          },
+          {
+            "defName": "Boolean",
+            "defId": "0859F3C0-406E-491D-A7FA-7137E55EFB43",
+            "guid": "9c774739-c1af-410e-8db0-385bc56ed9b4",
+            "x": 423,
+            "y": 456,
+            "properties": [
+              {
+                "name": "name",
+                "value": "True",
+                "hasCustomName": true
+              },
+              {
+                "name": "value",
+                "value": true
+              },
+              {
+                "name": "type",
+                "value": "static"
+              },
+              {
+                "name": "dimensions",
+                "value": {
+                  "width": 40,
+                  "height": 40
+                }
+              }
+            ],
+            "exportValues": []
+          },
+          {
+            "sourceBlock": "313dd8f0-90a1-435a-b141-e62209f05f04",
+            "sourceConnector": "e8f79755-5f21-4ab3-85b4-88d0c1eca5d7",
+            "targetBlock": "211cd8a3-cdbc-4308-88f9-28a9e713fdd5",
+            "targetConnector": "02d6b042-1a9c-4533-8628-2ede52881596",
+            "className": "Edge"
+          },
+          {
+            "sourceBlock": "4144c3b7-c6dd-4b46-8bfb-cda72cedb6b3",
+            "sourceConnector": "4c544af7-be31-4af0-9001-f9ad73a541b2",
+            "targetBlock": "4c1eb0bc-cfb3-41df-866f-a76e52681903",
+            "targetConnector": "2828a3df-11c9-41ff-be31-8e2051e1aeae",
+            "className": "Edge"
+          },
+          {
+            "sourceBlock": "313dd8f0-90a1-435a-b141-e62209f05f04",
+            "sourceConnector": "e8f79755-5f21-4ab3-85b4-88d0c1eca5d7",
+            "targetBlock": "4c1eb0bc-cfb3-41df-866f-a76e52681903",
+            "targetConnector": "30b58a47-3150-4f5a-ab6f-8d9f06693618",
+            "className": "Edge"
+          },
+          {
+            "sourceBlock": "4c1eb0bc-cfb3-41df-866f-a76e52681903",
+            "sourceConnector": "bcd6316f-78f5-4cd2-9b47-9d4514b7adfd",
+            "targetBlock": "31028761-9e3d-4748-a8f1-bfcf97041629",
+            "targetConnector": "3aa679fd-222c-4cbe-87d0-15615b0486ee",
+            "className": "Edge"
+          },
+          {
+            "sourceBlock": "00fb4819-9605-404e-b97e-29ac90ef25a2",
+            "sourceConnector": "2f051390-f610-4ee9-84c4-32af32e257e6",
+            "targetBlock": "211cd8a3-cdbc-4308-88f9-28a9e713fdd5",
+            "targetConnector": "945f664b-2c67-4492-856b-f9977ac113b4",
+            "className": "Edge"
+          },
+          {
+            "sourceBlock": "6acebde8-96cc-4f1c-9d72-1b77e07ced0e",
+            "sourceConnector": "2f051390-f610-4ee9-84c4-32af32e257e6",
+            "targetBlock": "211cd8a3-cdbc-4308-88f9-28a9e713fdd5",
+            "targetConnector": "c2f3c996-0295-4a9a-8300-ade3855822d6",
+            "className": "Edge"
+          },
+          {
+            "sourceBlock": "732c147d-5211-46b6-9021-f531cb34ca22",
+            "sourceConnector": "2f051390-f610-4ee9-84c4-32af32e257e6",
+            "targetBlock": "313dd8f0-90a1-435a-b141-e62209f05f04",
+            "targetConnector": "58b2e5c9-255d-4012-b04c-fb29566b28bb",
+            "className": "Edge"
+          },
+          {
+            "sourceBlock": "31028761-9e3d-4748-a8f1-bfcf97041629",
+            "sourceConnector": "0ae2c950-4f94-4988-8fd3-386829f781b4",
+            "targetBlock": "0bccf691-be12-4b42-a568-948888ea9933",
+            "targetConnector": "2f051390-f610-4ee9-84c4-32af32e257e6",
+            "className": "Edge"
+          },
+          {
+            "sourceBlock": "211cd8a3-cdbc-4308-88f9-28a9e713fdd5",
+            "sourceConnector": "23d72998-0705-4b7b-953e-18cc54358155",
+            "targetBlock": "7eaec3e5-07a8-4aa3-8475-bcc382be707b",
+            "targetConnector": "2f051390-f610-4ee9-84c4-32af32e257e6",
+            "className": "Edge"
+          },
+          {
+            "sourceBlock": "211cd8a3-cdbc-4308-88f9-28a9e713fdd5",
+            "sourceConnector": "9a5c027e-9579-4a23-a8d7-4073c3a2d88c",
+            "targetBlock": "abef9571-7cbe-4ff6-85ca-da413c888033",
+            "targetConnector": "2f051390-f610-4ee9-84c4-32af32e257e6",
+            "className": "Edge"
+          },
+          {
+            "sourceBlock": "537d77e3-9bf3-4be7-a3d4-bc1b436656b6",
+            "sourceConnector": "2f051390-f610-4ee9-84c4-32af32e257e6",
+            "targetBlock": "6b3a2cef-f714-4403-bd40-2ea49c0c6579",
+            "targetConnector": "1deb727d-51f8-41b2-83e1-0214670485ec",
+            "className": "Edge"
+          },
+          {
+            "sourceBlock": "6b3a2cef-f714-4403-bd40-2ea49c0c6579",
+            "sourceConnector": "27318463-032d-41c0-94da-fd00329f22fb",
+            "targetBlock": "313dd8f0-90a1-435a-b141-e62209f05f04",
+            "targetConnector": "4b303d03-8209-4186-9fb5-767e9ebbbfce",
+            "className": "Edge"
+          },
+          {
+            "sourceBlock": "9c774739-c1af-410e-8db0-385bc56ed9b4",
+            "sourceConnector": "43d2cafc-3e26-491a-85d8-1307552961b0",
+            "targetBlock": "211cd8a3-cdbc-4308-88f9-28a9e713fdd5",
+            "targetConnector": "11c573bd-bb71-4f5f-9389-58e48d35fd97",
+            "className": "Edge"
+          },
+          {
+            "sourceBlock": "211cd8a3-cdbc-4308-88f9-28a9e713fdd5",
+            "sourceConnector": "9a5c027e-9579-4a23-a8d7-4073c3a2d88c",
+            "targetBlock": "4144c3b7-c6dd-4b46-8bfb-cda72cedb6b3",
+            "targetConnector": "93e2199d-2a71-4c4d-a90c-6a79cc5e8e43",
+            "className": "Edge"
+          }
+        ]
+      }
+    },
+    {
+      "defName": "Instrument",
+      "defId": "9387710D-FC3E-42AA-AFFD-EB154BCFBAC7",
+      "guid": "875de33c-d5c8-4497-a8d4-7de741f42516",
+      "x": 384,
+      "y": 127.5,
+      "properties": [
+        {
+          "name": "name",
+          "value": "Instrument",
+          "hasCustomName": true
+        },
+        {
+          "name": "instrumentId",
+          "value": "13062129470405072006"
+        },
+        {
+          "name": "type",
+          "value": "orderInstrument"
+        },
+        {
+          "name": "account",
+          "value": "1192003"
+        },
+        {
+          "name": "instrumentAlias",
+          "value": "ASE2 feb mar"
+        },
+        {
+          "name": "exchangeAlias",
+          "value": ""
+        },
+        {
+          "name": "dimensions",
+          "value": {
+            "width": 80,
+            "height": 25
+          }
+        }
+      ],
+      "exportValues": []
+    },
+    {
+      "defName": "Price",
+      "defId": "7262B417-F089-4D6C-A0A8-EEEBCD5DAFD4",
+      "guid": "1fe95492-c033-47b9-a35a-6bcc67e0b724",
+      "x": 539,
+      "y": 244,
+      "properties": [
+        {
+          "name": "name",
+          "value": "ASE Price",
+          "hasCustomName": true
+        },
+        {
+          "name": "type",
+          "value": "orderPrice"
+        },
+        {
+          "name": "price",
+          "value": {
+            "price": 9,
+            "formatted": "9.0"
+          }
+        },
+        {
+          "name": "dimensions",
+          "value": {
+            "width": 80,
+            "height": 40
+          }
+        },
+        {
+          "name": "currValue",
+          "value": "9"
+        }
+      ],
+      "exportValues": []
+    },
+    {
+      "defName": "Number",
+      "defId": "794959B3-80F3-46DD-976F-B7BB517A2BAA",
+      "guid": "f527d903-cb62-42c9-91b0-2faea215520d",
+      "x": 634,
+      "y": 320,
+      "properties": [
+        {
+          "name": "name",
+          "value": "Reload Qty",
+          "hasCustomName": true
+        },
+        {
+          "name": "value",
+          "value": 3
+        },
+        {
+          "name": "orderTypeValue",
+          "value": "limit"
+        },
+        {
+          "name": "TIF",
+          "value": "day"
+        },
+        {
+          "name": "type",
+          "value": "orderQty"
+        },
+        {
+          "name": "maxValue",
+          "value": null
+        },
+        {
+          "name": "minValue",
+          "value": null
+        },
+        {
+          "name": "dimensions",
+          "value": {
+            "width": 40,
+            "height": 40
+          }
+        },
+        {
+          "name": "currValue",
+          "value": 2
+        }
+      ],
+      "exportValues": []
+    },
+    {
+      "defName": "Number",
+      "defId": "794959B3-80F3-46DD-976F-B7BB517A2BAA",
+      "guid": "b6f4593e-fa5e-4a3b-8b71-9540dc182b32",
+      "x": 1034,
+      "y": 92,
+      "properties": [
+        {
+          "name": "name",
+          "value": "Max Limit",
+          "hasCustomName": true
+        },
+        {
+          "name": "value",
+          "value": 10
+        },
+        {
+          "name": "orderTypeValue",
+          "value": "limit"
+        },
+        {
+          "name": "TIF",
+          "value": "day"
+        },
+        {
+          "name": "type",
+          "value": "userDefined"
+        },
+        {
+          "name": "maxValue",
+          "value": null
+        },
+        {
+          "name": "minValue",
+          "value": null
+        },
+        {
+          "name": "dimensions",
+          "value": {
+            "width": 40,
+            "height": 40
+          }
+        },
+        {
+          "name": "currValue",
+          "value": 10
+        }
+      ],
+      "exportValues": []
+    },
+    {
+      "defName": "ValueAccumulator",
+      "defId": "7C23E28F-AF94-4D4D-9E4D-0AD5584D0F4F",
+      "guid": "4bb41a38-bb55-4aba-a3db-46f0c92d1b6b",
+      "x": 1021.5,
+      "y": 195,
+      "properties": [
+        {
+          "name": "name",
+          "value": "signal",
+          "hasCustomName": true
+        },
+        {
+          "name": "formula",
+          "value": "{fillQuantity} "
+        },
+        {
+          "name": "connectors",
+          "value": {}
+        },
+        {
+          "name": "dimensions",
+          "value": {
+            "width": 100,
+            "height": 40
+          }
+        },
+        {
+          "name": "formulaNodes",
+          "value": {
+            "output": {
+              "type": "field",
+              "loc": {
+                "start": {
+                  "offset": 0,
+                  "line": 1,
+                  "column": 1
+                },
+                "end": {
+                  "offset": 14,
+                  "line": 1,
+                  "column": 15
+                }
+              },
+              "name": "fillQuantity"
+            }
+          }
+        },
+        {
+          "name": "formulaGraphId",
+          "value": "87727094-f327-4185-a4f7-a61ba5d7d7ba"
+        }
+      ],
+      "exportValues": []
+    },
+    {
+      "defName": "Equal",
+      "defId": "EE3EC1CE-5407-4610-A0D2-1E3EA1B17A97",
+      "guid": "6edce854-7000-4da5-80a5-906b5c22ef75",
+      "x": 1196,
+      "y": 145,
+      "properties": [
+        {
+          "name": "name",
+          "value": "Equal0",
+          "hasCustomName": true
+        },
+        {
+          "name": "dimensions",
+          "value": {
+            "width": 40,
+            "height": 40
+          }
+        },
+        {
+          "name": "generic",
+          "value": {
+            "30b58a47-3150-4f5a-ab6f-8d9f06693618": "real",
+            "2828a3df-11c9-41ff-be31-8e2051e1aeae": "real"
+          }
+        }
+      ],
+      "exportValues": []
+    },
+    {
+      "defName": "Terminal",
+      "defId": "7201CF2A-8E4A-48F1-A61A-444D43CA96EA",
+      "guid": "8325210a-63a6-4376-885f-5ebea4c294b7",
+      "x": 1294.5,
+      "y": 145.5,
+      "properties": [
+        {
+          "name": "name",
+          "value": "Terminal0",
+          "hasCustomName": true
+        },
+        {
+          "name": "mode",
+          "value": "stop"
+        },
+        {
+          "name": "dimensions",
+          "value": {
+            "width": 48,
+            "height": 55
+          }
+        }
+      ],
+      "exportValues": []
+    },
+    {
+      "defName": "ValueAccumulator",
+      "defId": "7C23E28F-AF94-4D4D-9E4D-0AD5584D0F4F",
+      "guid": "bcbac093-9318-4bc6-ae50-bd8df9d4d88a",
+      "x": 1027.5,
+      "y": 263,
+      "properties": [
+        {
+          "name": "name",
+          "value": "QFSum",
+          "hasCustomName": true
+        },
+        {
+          "name": "formula",
+          "value": "{fillQuantity} "
+        },
+        {
+          "name": "connectors",
+          "value": {}
+        },
+        {
+          "name": "dimensions",
+          "value": {
+            "width": 100,
+            "height": 40
+          }
+        },
+        {
+          "name": "formulaNodes",
+          "value": {
+            "output": {
+              "type": "field",
+              "loc": {
+                "start": {
+                  "offset": 0,
+                  "line": 1,
+                  "column": 1
+                },
+                "end": {
+                  "offset": 14,
+                  "line": 1,
+                  "column": 15
+                }
+              },
+              "name": "fillQuantity"
+            }
+          }
+        },
+        {
+          "name": "formulaGraphId",
+          "value": "c27cb45f-d405-441f-98bc-3a0a762d5470"
+        }
+      ],
+      "exportValues": []
+    },
+    {
+      "defName": "ValueInjector",
+      "defId": "D67B3CD2-83B4-40C8-A1E8-1ADE94C7B40F",
+      "guid": "009e6656-ebc3-4c7c-81e4-c3f59094f6bd",
+      "x": 1060,
+      "y": 368,
+      "properties": [
+        {
+          "name": "name",
+          "value": "ValueInjector0",
+          "hasCustomName": true
+        },
+        {
+          "name": "formula",
+          "value": [
+            {
+              "defID": "fc7bbde0-75de-4d1f-be15-21f5cb90bb5c",
+              "fieldName": "userField1",
+              "formula": "[b6f4593e-fa5e-4a3b-8b71-9540dc182b32.1d65ec2f-0fdd-4d88-b01d-5393a4e6890e] - [bcbac093-9318-4bc6-ae50-bd8df9d4d88a.4c544af7-be31-4af0-9001-f9ad73a541b2] "
+            }
+          ]
+        },
+        {
+          "name": "connectors",
+          "value": {}
+        },
+        {
+          "name": "dimensions",
+          "value": {
+            "width": 90,
+            "height": 40
+          }
+        },
+        {
+          "name": "formulaGraphId",
+          "value": "aded9cdc-1477-4a4c-b7d6-6947c72e2e44"
+        },
+        {
+          "name": "formulaNodes",
+          "value": {
+            "userField1": {
+              "type": "op",
+              "loc": {
+                "start": {
+                  "offset": 0,
+                  "line": 1,
+                  "column": 1
+                },
+                "end": {
+                  "offset": 154,
+                  "line": 1,
+                  "column": 155
+                }
+              },
+              "op": "-",
+              "left": {
+                "type": "connector",
+                "loc": {
+                  "start": {
+                    "offset": 0,
+                    "line": 1,
+                    "column": 1
+                  },
+                  "end": {
+                    "offset": 75,
+                    "line": 1,
+                    "column": 76
+                  }
+                },
+                "name": "b6f4593e-fa5e-4a3b-8b71-9540dc182b32.1d65ec2f-0fdd-4d88-b01d-5393a4e6890e",
+                "blockId": "b6f4593e-fa5e-4a3b-8b71-9540dc182b32",
+                "connId": "1d65ec2f-0fdd-4d88-b01d-5393a4e6890e",
+                "connDataType": "generic"
+              },
+              "right": {
+                "type": "connector",
+                "loc": {
+                  "start": {
+                    "offset": 78,
+                    "line": 1,
+                    "column": 79
+                  },
+                  "end": {
+                    "offset": 153,
+                    "line": 1,
+                    "column": 154
+                  }
+                },
+                "name": "bcbac093-9318-4bc6-ae50-bd8df9d4d88a.4c544af7-be31-4af0-9001-f9ad73a541b2",
+                "blockId": "bcbac093-9318-4bc6-ae50-bd8df9d4d88a",
+                "connId": "4c544af7-be31-4af0-9001-f9ad73a541b2",
+                "connDataType": "generic"
+              }
+            }
+          }
+        }
+      ],
+      "exportValues": []
+    },
+    {
+      "defName": "Generator",
+      "defId": "197F74F7-3A63-4191-A761-538485367671",
+      "guid": "a27bba05-ad58-41bf-8b83-53449c10c440",
+      "x": 694,
+      "y": 416,
+      "properties": [
+        {
+          "name": "name",
+          "value": "Generator0",
+          "hasCustomName": true
+        },
+        {
+          "name": "mode",
+          "value": "initialStart"
+        },
+        {
+          "name": "dateTime",
+          "value": "1654241610546000000"
+        },
+        {
+          "name": "Connectors",
+          "value": []
+        },
+        {
+          "name": "color",
+          "value": "rgb(200, 200, 200)"
+        },
+        {
+          "name": "dimensions",
+          "value": {
+            "width": 50,
+            "height": 50
+          }
+        }
+      ],
+      "exportValues": []
+    },
+    {
+      "defName": "Funnel",
+      "defId": "2E30CAD4-E9E3-4B89-8867-F51EA319766C",
+      "guid": "c0864144-e209-44ba-965d-3b5e3d847930",
+      "x": 813,
+      "y": 433,
+      "properties": [
+        {
+          "name": "name",
+          "value": "Funnel0",
+          "hasCustomName": true
+        },
+        {
+          "name": "dimensions",
+          "value": {
+            "width": 60,
+            "height": 59
+          }
+        }
+      ],
+      "exportValues": []
+    },
+    {
+      "sourceBlock": "875de33c-d5c8-4497-a8d4-7de741f42516",
+      "sourceConnector": "4591f37d-348f-454c-b6f8-5eac9457a124",
+      "targetBlock": "1fe95492-c033-47b9-a35a-6bcc67e0b724",
+      "targetConnector": "c088bde4-a808-4f93-8289-62ebe4200e64",
+      "className": "Edge"
+    },
+    {
+      "sourceBlock": "875de33c-d5c8-4497-a8d4-7de741f42516",
+      "sourceConnector": "4591f37d-348f-454c-b6f8-5eac9457a124",
+      "targetBlock": "a99249a2-bb75-4b29-a67c-fc3775529b64",
+      "targetConnector": "00fb4819-9605-404e-b97e-29ac90ef25a2",
+      "className": "Edge"
+    },
+    {
+      "sourceBlock": "1fe95492-c033-47b9-a35a-6bcc67e0b724",
+      "sourceConnector": "335e1545-0048-476b-be2a-7563e9a6348e",
+      "targetBlock": "a99249a2-bb75-4b29-a67c-fc3775529b64",
+      "targetConnector": "6acebde8-96cc-4f1c-9d72-1b77e07ced0e",
+      "className": "Edge"
+    },
+    {
+      "sourceBlock": "f527d903-cb62-42c9-91b0-2faea215520d",
+      "sourceConnector": "1d65ec2f-0fdd-4d88-b01d-5393a4e6890e",
+      "targetBlock": "a99249a2-bb75-4b29-a67c-fc3775529b64",
+      "targetConnector": "732c147d-5211-46b6-9021-f531cb34ca22",
+      "className": "Edge"
+    },
+    {
+      "sourceBlock": "a99249a2-bb75-4b29-a67c-fc3775529b64",
+      "sourceConnector": "abef9571-7cbe-4ff6-85ca-da413c888033",
+      "targetBlock": "4bb41a38-bb55-4aba-a3db-46f0c92d1b6b",
+      "targetConnector": "93e2199d-2a71-4c4d-a90c-6a79cc5e8e43",
+      "className": "Edge"
+    },
+    {
+      "sourceBlock": "4bb41a38-bb55-4aba-a3db-46f0c92d1b6b",
+      "sourceConnector": "4c544af7-be31-4af0-9001-f9ad73a541b2",
+      "targetBlock": "6edce854-7000-4da5-80a5-906b5c22ef75",
+      "targetConnector": "30b58a47-3150-4f5a-ab6f-8d9f06693618",
+      "className": "Edge"
+    },
+    {
+      "sourceBlock": "b6f4593e-fa5e-4a3b-8b71-9540dc182b32",
+      "sourceConnector": "1d65ec2f-0fdd-4d88-b01d-5393a4e6890e",
+      "targetBlock": "6edce854-7000-4da5-80a5-906b5c22ef75",
+      "targetConnector": "2828a3df-11c9-41ff-be31-8e2051e1aeae",
+      "className": "Edge"
+    },
+    {
+      "sourceBlock": "6edce854-7000-4da5-80a5-906b5c22ef75",
+      "sourceConnector": "bcd6316f-78f5-4cd2-9b47-9d4514b7adfd",
+      "targetBlock": "8325210a-63a6-4376-885f-5ebea4c294b7",
+      "targetConnector": "e7c76b03-be23-4989-9797-263c58c86fb6",
+      "className": "Edge"
+    },
+    {
+      "sourceBlock": "a99249a2-bb75-4b29-a67c-fc3775529b64",
+      "sourceConnector": "7eaec3e5-07a8-4aa3-8475-bcc382be707b",
+      "targetBlock": "bcbac093-9318-4bc6-ae50-bd8df9d4d88a",
+      "targetConnector": "93e2199d-2a71-4c4d-a90c-6a79cc5e8e43",
+      "className": "Edge"
+    },
+    {
+      "sourceBlock": "a99249a2-bb75-4b29-a67c-fc3775529b64",
+      "sourceConnector": "0bccf691-be12-4b42-a568-948888ea9933",
+      "targetBlock": "009e6656-ebc3-4c7c-81e4-c3f59094f6bd",
+      "targetConnector": "d944a0fb-af1d-4719-8975-a844138de40a",
+      "className": "Edge"
+    },
+    {
+      "sourceBlock": "a27bba05-ad58-41bf-8b83-53449c10c440",
+      "sourceConnector": "0ae2c950-4f94-4988-8fd3-386829f781b4",
+      "targetBlock": "c0864144-e209-44ba-965d-3b5e3d847930",
+      "targetConnector": "88a66e79-fc1e-48e2-b57d-59f01ec24cce",
+      "className": "Edge"
+    },
+    {
+      "sourceBlock": "009e6656-ebc3-4c7c-81e4-c3f59094f6bd",
+      "sourceConnector": "09007c9f-8ba3-4b82-938c-b12cfa4a34cc",
+      "targetBlock": "c0864144-e209-44ba-965d-3b5e3d847930",
+      "targetConnector": "b9d1de0a-0d34-45b6-986d-9dcd0e5a410d",
+      "className": "Edge"
+    },
+    {
+      "sourceBlock": "c0864144-e209-44ba-965d-3b5e3d847930",
+      "sourceConnector": "f4486425-079c-4d62-9674-d2495e2cda8a",
+      "targetBlock": "a99249a2-bb75-4b29-a67c-fc3775529b64",
+      "targetConnector": "537d77e3-9bf3-4be7-a3d4-bc1b436656b6",
+      "className": "Edge"
+    }
+  ],
+  "lastModifiedTime": 1654251030439,
+  "ignoreMarketState": false,
+  "graphIdToViewport": {
+    "bb0b8279-c12c-4566-9504-d29d5468e099": {
+      "x": 0,
+      "y": 0,
+      "scale": 1
+    },
+    "a99249a2-bb75-4b29-a67c-fc3775529b64": {
+      "x": 0,
+      "y": 0,
+      "scale": 1
+    },
+    "0cd704b4-ba93-487d-9916-cc2def00d7cd": {
+      "x": 116,
+      "y": -91,
+      "scale": 1
+    }
+  },
+  "showInMDT": 0,
+  "isSOA": false,
+  "isOmaOta": false
+}
